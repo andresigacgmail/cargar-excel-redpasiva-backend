@@ -9,16 +9,17 @@ import java.util.List;
 
 public class PasivaDto {
 
-    private Estacion estacion;
+    private EstacionDto estacionDto;
     private Materializacion materializacion;
     private List<PuntosReferencia> puntosReferencia = new ArrayList<>();
 
-    public Estacion getEstacion() {
-        return estacion;
+
+    public EstacionDto getEstacionDto() {
+        return estacionDto;
     }
 
-    public void setEstacion(Estacion estacion) {
-        this.estacion = estacion;
+    public void setEstacionDto(EstacionDto estacionDto) {
+        this.estacionDto = estacionDto;
     }
 
     public Materializacion getMaterializacion() {

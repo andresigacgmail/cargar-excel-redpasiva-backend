@@ -1,45 +1,14 @@
-package com.example.cargarregistrosredpasiva.entity;
+package com.example.cargarregistrosredpasiva.dto;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "main_estacion")
-public class Estacion {
-
-    public Estacion() {
-    }
-
-    public Estacion(String identificador, String nomenclatura, int municipio, double latitud, double longitud, double altura_elipsoidal, int estado_vertice) {
-        this.identificador = identificador;
-        this.nomenclatura = nomenclatura;
-        this.municipio = municipio;
-        this.latitud = latitud;
-        this.longitud = longitud;
-        this.altura_elipsoidal = altura_elipsoidal;
-        this.estado_vertice = estado_vertice;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int t_id;
+public class EstacionDto {
 
     private String identificador;
     private String nomenclatura;
-    private int municipio;
+    private String municipio;
     private double latitud;
     private double longitud;
     private double altura_elipsoidal;
-    private int estado_vertice;
-
-
-
-    public int getT_id() {
-        return t_id;
-    }
-
-    public void setT_id(int t_id) {
-        this.t_id = t_id;
-    }
+    private String estado_vertice;
 
     public String getIdentificador() {
         return identificador;
@@ -57,11 +26,11 @@ public class Estacion {
         this.nomenclatura = nomenclatura;
     }
 
-    public int getMunicipio() {
+    public String getMunicipio() {
         return municipio;
     }
 
-    public void setMunicipio(int municipio) {
+    public void setMunicipio(String municipio) {
         this.municipio = municipio;
     }
 
@@ -89,11 +58,11 @@ public class Estacion {
         this.altura_elipsoidal = altura_elipsoidal;
     }
 
-    public int getEstado_vertice() {
+    public String getEstado_vertice() {
         return estado_vertice;
     }
 
-    public void setEstado_vertice(int estado_vertice) {
+    public void setEstado_vertice(String estado_vertice) {
         this.estado_vertice = estado_vertice;
     }
 }
