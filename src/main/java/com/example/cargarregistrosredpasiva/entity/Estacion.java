@@ -9,7 +9,8 @@ public class Estacion {
     public Estacion() {
     }
 
-    public Estacion(String identificador, String nomenclatura, int municipio, double latitud, double longitud, double altura_elipsoidal, int estado_vertice) {
+    public Estacion(String identificador, String nomenclatura, int municipio, double latitud, double longitud, double altura_elipsoidal, int estado_vertice, int agencia) {
+        this.agencia = agencia;
         this.identificador = identificador;
         this.nomenclatura = nomenclatura;
         this.municipio = municipio;
@@ -30,8 +31,25 @@ public class Estacion {
     private double longitud;
     private double altura_elipsoidal;
     private int estado_vertice;
+    private int agencia;
+    private String geom = "01010000A0A1240000702BEE301EC35241F8A8815EE6E742410000000000000000";
 
 
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
+
+    public String getGeom() {
+        return geom;
+    }
+
+    public void setGeom(String geom) {
+        this.geom = geom;
+    }
 
     public int getT_id() {
         return t_id;

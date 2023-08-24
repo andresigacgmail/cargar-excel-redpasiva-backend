@@ -9,6 +9,17 @@ public class EstacionDto {
     private double longitud;
     private double altura_elipsoidal;
     private String estado_vertice;
+    private int agencia;
+//    private String geom;
+
+
+    public int getAgencia() {
+        return agencia;
+    }
+
+    public void setAgencia(int agencia) {
+        this.agencia = agencia;
+    }
 
     public String getIdentificador() {
         return identificador;
