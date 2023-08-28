@@ -1,10 +1,20 @@
 package com.example.cargarregistrosredpasiva.entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "puntoreferencia")
 public class PuntosReferencia {
+
+    public PuntosReferencia() {
+    }
+
+    public PuntosReferencia(int azimut, double distancia, String objeto, int estacion) {
+        this.azimut = azimut;
+        this.distancia = distancia;
+        this.objeto = objeto;
+        this.estacion = estacion;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,6 +23,16 @@ public class PuntosReferencia {
     private int azimut;
     private double distancia;
     private String objeto;
+
+    private int estacion;
+
+    public int getEstacion() {
+        return estacion;
+    }
+
+    public void setEstacion(int estacion) {
+        this.estacion = estacion;
+    }
 
     public int getT_id() {
         return t_id;

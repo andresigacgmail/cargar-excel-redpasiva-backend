@@ -1,39 +1,13 @@
-package com.example.cargarregistrosredpasiva.entity;
+package com.example.cargarregistrosredpasiva.dto;
 
 
-import javax.persistence.*;
 import java.util.Date;
 
-@Entity
-@Table(name = "materializacion")
-public class Materializacion {
+public class MaterializacionDto {
 
-    public Materializacion() {
-    }
-
-    public Materializacion(String lugar_materializacion, int tipo_materializacion, Date fecha_materializacion, Date fecha_descripcion, String monumentado_por_1, double ancho_mts, double largo_mts, double altura_mts, String observacion, String actualizó, String descripción_detallada, String acceso_general, String registrado_por, int estacion) {
-        this.lugar_materializacion = lugar_materializacion;
-        this.tipo_materializacion = tipo_materializacion;
-        this.fecha_materializacion = fecha_materializacion;
-        this.fecha_descripcion = fecha_descripcion;
-        this.monumentado_por_1 = monumentado_por_1;
-        this.ancho_mts = ancho_mts;
-        this.largo_mts = largo_mts;
-        this.altura_mts = altura_mts;
-        this.observacion = observacion;
-        this.actualizó = actualizó;
-        this.descripción_detallada = descripción_detallada;
-        this.acceso_general = acceso_general;
-        this.registrado_por = registrado_por;
-        this.estacion = estacion;
-    }
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int t_id;
-
     private String lugar_materializacion;
-    private int tipo_materializacion;
+    private String tipo_materializacion;
     private Date fecha_materializacion;
     private Date fecha_descripcion;
     private String monumentado_por_1;
@@ -47,7 +21,13 @@ public class Materializacion {
     private String registrado_por;
     private int estacion;
 
+    public int getT_id() {
+        return t_id;
+    }
 
+    public void setT_id(int t_id) {
+        this.t_id = t_id;
+    }
 
     public int getEstacion() {
         return estacion;
@@ -57,13 +37,6 @@ public class Materializacion {
         this.estacion = estacion;
     }
 
-    public int getT_id() {
-        return t_id;
-    }
-
-    public void setT_id(int t_id) {
-        this.t_id = t_id;
-    }
 
     public String getLugar_materializacion() {
         return lugar_materializacion;
@@ -73,11 +46,11 @@ public class Materializacion {
         this.lugar_materializacion = lugar_materializacion;
     }
 
-    public int getTipo_materializacion() {
+    public String getTipo_materializacion() {
         return tipo_materializacion;
     }
 
-    public void setTipo_materializacion(int tipo_materializacion) {
+    public void setTipo_materializacion(String tipo_materializacion) {
         this.tipo_materializacion = tipo_materializacion;
     }
 

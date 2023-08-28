@@ -10,7 +10,7 @@ import java.util.List;
 public class PasivaDto {
 
     private EstacionDto estacionDto;
-    private Materializacion materializacion;
+    private MaterializacionDto materializacionDto;
     private List<PuntosReferencia> puntosReferencia = new ArrayList<>();
 
 
@@ -22,12 +22,12 @@ public class PasivaDto {
         this.estacionDto = estacionDto;
     }
 
-    public Materializacion getMaterializacion() {
-        return materializacion;
+    public MaterializacionDto getMaterializacionDto() {
+        return materializacionDto;
     }
 
-    public void setMaterializacion(Materializacion materializacion) {
-        this.materializacion = materializacion;
+    public void setMaterializacionDto(MaterializacionDto materializacionDto) {
+        this.materializacionDto = materializacionDto;
     }
 
     public List<PuntosReferencia> getPuntosReferencia() {

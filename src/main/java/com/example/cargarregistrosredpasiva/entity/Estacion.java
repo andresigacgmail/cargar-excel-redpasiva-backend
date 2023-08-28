@@ -9,7 +9,7 @@ public class Estacion {
     public Estacion() {
     }
 
-    public Estacion(String identificador, String nomenclatura, int municipio, double latitud, double longitud, double altura_elipsoidal, int estado_vertice, int agencia) {
+    public Estacion(String identificador, String nomenclatura, int municipio, double latitud, double longitud, double altura_elipsoidal, int estado_vertice, int agencia, String geom) {
         this.agencia = agencia;
         this.identificador = identificador;
         this.nomenclatura = nomenclatura;
@@ -18,6 +18,7 @@ public class Estacion {
         this.longitud = longitud;
         this.altura_elipsoidal = altura_elipsoidal;
         this.estado_vertice = estado_vertice;
+        this.geom = geom;
     }
 
     @Id
@@ -32,7 +33,7 @@ public class Estacion {
     private double altura_elipsoidal;
     private int estado_vertice;
     private int agencia;
-    private String geom = "01010000A0A1240000702BEE301EC35241F8A8815EE6E742410000000000000000";
+    private String geom;
 
 
     public int getAgencia() {

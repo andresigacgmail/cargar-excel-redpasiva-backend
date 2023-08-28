@@ -1,6 +1,7 @@
 package com.example.cargarregistrosredpasiva.controllers;
 
 import com.example.cargarregistrosredpasiva.dto.PasivaDto;
+import com.example.cargarregistrosredpasiva.dto.ResponsePasivaDto;
 import com.example.cargarregistrosredpasiva.entity.Municipio;
 import com.example.cargarregistrosredpasiva.repository.MunicipioRepository;
 import com.example.cargarregistrosredpasiva.service.PasivaService;
@@ -25,7 +26,7 @@ public class PasivaController {
     }
 
     @PostMapping
-    public ResponseEntity<PasivaDto> saveStation(@RequestBody List<PasivaDto> pasivaDto){
+    public ResponseEntity<List<ResponsePasivaDto>> saveStation(@RequestBody List<PasivaDto> pasivaDto){
         return new ResponseEntity<>(pasivaService.procesarPasiva(pasivaDto), HttpStatus.CREATED);
     }
 
