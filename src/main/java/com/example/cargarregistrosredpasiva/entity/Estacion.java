@@ -9,6 +9,10 @@ public class Estacion {
     public Estacion() {
     }
 
+    public Estacion(String identificador) {
+        this.identificador = identificador;
+    }
+
     public Estacion(String identificador, String nomenclatura, int municipio, double latitud, double longitud, double altura_elipsoidal, int estado_vertice, int agencia, String geom) {
         this.agencia = agencia;
         this.identificador = identificador;

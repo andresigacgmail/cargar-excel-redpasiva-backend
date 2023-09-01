@@ -11,6 +11,7 @@ public class ResponsePasivaDto {
     private Estacion estacion;
     private Materializacion materializacion;
     private List<PuntosReferencia> puntosReferencia;
+    private boolean status = false;
 
     public Estacion getEstacion() {
         return estacion;
@@ -34,5 +35,13 @@ public class ResponsePasivaDto {
 
     public void setPuntosReferencia(List<PuntosReferencia> puntosReferencia) {
         this.puntosReferencia = puntosReferencia;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }

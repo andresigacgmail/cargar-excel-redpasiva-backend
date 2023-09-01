@@ -31,11 +31,9 @@ public class PasivaService {
 
         for(PasivaDto pasivaDto1 : pasivaDto){
 
-            try {
-
-
-
             ResponsePasivaDto responsePasivaDto = new ResponsePasivaDto();
+
+            try {
 
             estadoVertice = pasivaDto1.getEstacionDto().getEstado_vertice().equals("Materializado")  ? 2 : 1;
 
@@ -99,11 +97,13 @@ public class PasivaService {
             ));
 
             responsePasivaDto.setMaterializacion(materializacion);
+            responsePasivaDto.setStatus(true);
 
-
-                responseListaPasivaDto.add(responsePasivaDto);
+            responseListaPasivaDto.add(responsePasivaDto);
 
             }catch (Exception e){
+                responsePasivaDto.setEstacion(new Estacion(pasivaDto1.getEstacionDto().getIdentificador()));
+                responseListaPasivaDto.add(responsePasivaDto);
                 System.out.println(e);
             }
 
